@@ -1,0 +1,23 @@
+---
+title: "Homework 6"
+author: "Joshua Khalil"
+format: pdf
+---
+
+
+```{r}
+library(bio3d)
+
+analyze_bfactors <- function(pdb_ids, chain="A", elety="CA") {
+  for (id in pdb_ids) {
+    s <- read.pdb(id)
+    s.chainA <- trim.pdb(s, chain=chain, elety=elety)
+    s.b <- s.chainA$atom$b
+    plotb3(s.b, sse=s.chainA, typ="l", ylab="Bfactor")
+    title(main=id)
+  }
+}
+
+analyze_bfactors(c("4AKE", "1AKE", "1E4Y"))
+```
+
