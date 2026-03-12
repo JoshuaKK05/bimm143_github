@@ -1,0 +1,27 @@
+---
+title: "Class 10 Structural Bioformatics 1"
+author: "Joshua Khalil A17784122"
+format: html
+---
+
+
+## PDB Statisitics 
+
+The protein data bank is the main repository of biomolecular structures. lets see what it contains
+
+
+
+>Q1: What percentage of structures in the PDB are solved by X-Ray and Electron Microscopy.
+
+The comma in these numbers leads to numbers being read as
+
+```{r}
+library(readr)
+stats <- read.csv("pdb_stats.csv")
+```
+
+
+>Q2: What proportion of structures in the PDB are protein?
+
+>Q3: Type HIV in the PDB website search box on the home page and determine how many HIV-1 protease structures are in the current PDB?
+
